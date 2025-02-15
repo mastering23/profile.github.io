@@ -1,12 +1,13 @@
 
 import './index.css'
+import { MyRoutes } from './router/MyRoutes';
 
 const App = () =>{
 
 
   return (
     <>
-     <h1>TESTING</h1>
+    <MyRoutes/>
     </>
   )
 }
