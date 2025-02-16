@@ -2,18 +2,21 @@ import React from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import { Index } from '../components';
 import { MyProfile } from '../components/MyProfile';
-import { Services } from '../components/Services';
+import { Services } from '../components/Services/';
 import { Resume } from '../components/Resume';
 import { Contact } from '../components/Contact';
-
+import { HeaderNav } from '../components/layouts/HeaderNav';
+import { Footer } from '../components/layouts/Footer';
 export const MyRoutes = () => {
   return (
     <BrowserRouter>
 
-      {/* Header and Navigation Bar */}
-      {/* Add your navigation bar here if needed */}
+ 
+      <HeaderNav />
 
-      {/* Main Content */}
+  
+
+      <section className="content">
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/index" element={<Index />} />
@@ -22,9 +25,11 @@ export const MyRoutes = () => {
         <Route path="/resume" element={<Resume />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-
-      {/* Footer */}
-      {/* Add your footer here if needed */}
+      </section>
+  
+   
+ 
+      <Footer/>
 
     </BrowserRouter>
   );
